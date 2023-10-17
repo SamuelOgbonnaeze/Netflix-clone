@@ -1,11 +1,7 @@
 import bcrypt from 'bcrypt';
 import { NextApiRequest, NextApiResponse } from 'next';
 import prismadb from '@/lib/prismadb';
-import { PrismaClient } from '@prisma/client';
 
-
-
-const prisma = new PrismaClient()
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -16,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         const { email, name, password } = req.body;
 
-        const existingUser = await prisma.user.findUnique({
+        const existingUser = await prismadb.user.findUnique({
             where: { email }
         })
 
