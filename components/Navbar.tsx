@@ -38,7 +38,7 @@ const Navbar = () => {
 
     return (
         <nav className='w-full fixed z-40 text-white'>
-            <div className={`px-4 md:px-6 py-6 flex flex-row items-center transition duration-500 ${showBackground? 'bg-zinc-900 bg-opacity-10': ''} `}>
+            <div className={`px-4 md:px-6 py-6 flex flex-row items-center transition duration-500 ${showBackground? 'bg-zinc-900 bg-opacity-90': ''} `}>
                 <img src="/images/logo.png" alt="Logo" className="h-4 lg:h-7 " />
                 {/* Desktop Left nav options */}
                 <div className="flex-row ml-8 gap-7 hidden lg:flex">
